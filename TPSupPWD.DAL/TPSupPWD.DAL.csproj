@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EDD3D631-5045-49B8-8EE9-B8D79D7DA698}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>TPSupPWD</RootNamespace>
-    <AssemblyName>TPSupPWD</AssemblyName>
+    <ProjectGuid>{08FE0CE6-1BD1-4376-A759-36C6FF078A2F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TPSupPWD.DAL</RootNamespace>
+    <AssemblyName>TPSupPWD.DAL</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,8 +40,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,8 +48,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IManager.cs" />
+    <Compile Include="Manager.cs" />
     <Compile Include="ManagerContext.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Migrations\201901072328348_TP1.cs" />
+    <Compile Include="Migrations\201901072328348_TP1.Designer.cs">
+      <DependentUpon>201901072328348_TP1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PwdDAO.cs" />
+    <Compile Include="StudentDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,10 +69,11 @@
       <Project>{671ea226-e186-49e0-9c56-4a60caa265d6}</Project>
       <Name>TPSupPWD.BO</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TPSupPWD.DAL\TPSupPWD.DAL.csproj">
-      <Project>{08fe0ce6-1bd1-4376-a759-36c6ff078a2f}</Project>
-      <Name>TPSupPWD.DAL</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201901072328348_TP1.resx">
+      <DependentUpon>201901072328348_TP1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

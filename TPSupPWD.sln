@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPSupPWD", "TPSupPWD\TPSupPWD.csproj", "{EDD3D631-5045-49B8-8EE9-B8D79D7DA698}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPSupPWD.BO", "TPSupPWD.BO\TPSupPWD.BO.csproj", "{671EA226-E186-49E0-9C56-4A60CAA265D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPSupPWD.DAL", "TPSupPWD.DAL\TPSupPWD.DAL.csproj", "{08FE0CE6-1BD1-4376-A759-36C6FF078A2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{EDD3D631-5045-49B8-8EE9-B8D79D7DA698}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDD3D631-5045-49B8-8EE9-B8D79D7DA698}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDD3D631-5045-49B8-8EE9-B8D79D7DA698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{671EA226-E186-49E0-9C56-4A60CAA265D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{671EA226-E186-49E0-9C56-4A60CAA265D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{671EA226-E186-49E0-9C56-4A60CAA265D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{671EA226-E186-49E0-9C56-4A60CAA265D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08FE0CE6-1BD1-4376-A759-36C6FF078A2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08FE0CE6-1BD1-4376-A759-36C6FF078A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08FE0CE6-1BD1-4376-A759-36C6FF078A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08FE0CE6-1BD1-4376-A759-36C6FF078A2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
